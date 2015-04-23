@@ -2,6 +2,7 @@ from django import forms
 
 from .models import SignUp
 
+
 class SignUpForm(forms.ModelForm):
     class Meta:
         password = forms.CharField(widget=forms.PasswordInput)
@@ -9,4 +10,5 @@ class SignUpForm(forms.ModelForm):
         fields = "__all__"
         widgets = {
                    'password': forms.PasswordInput(),
-        }
+                   }
+        

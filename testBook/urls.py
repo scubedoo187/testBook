@@ -1,10 +1,13 @@
-from django.conf.urls import include, url, patterns
+from django.conf.urls import include
+from django.conf.urls import url
+from django.conf.urls import patterns
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 from django.contrib import admin
 admin.autodiscover()
+
 
 urlpatterns = patterns('',
     # Examples:
@@ -15,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^thank/$','signup.views.thank', name='thank' ),
     url(r'^admin/', include(admin.site.urls)),
 )
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,
