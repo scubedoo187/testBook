@@ -10,4 +10,4 @@ class SignUpForm(forms.ModelForm):
         fields = "__all__"
         widgets = {
                    'password': forms.PasswordInput(),
-                   }
+        }

@@ -16,7 +16,7 @@ def home(request):
         save_it.save()
         messages.success(request, 'Success!')
         return HttpResponseRedirect('/thank/')
-                             
+
     return render_to_response("signup.html",
                               locals(),
                               context_instance = RequestContext(request))
